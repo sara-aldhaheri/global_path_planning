@@ -1,0 +1,62 @@
+global_path_planning:
+  ros__parameters:
+    # GPMP2 planning parameters
+    planning_space: 'SE2' # Options: 'SE2', 'SE3'
+    total_time_sec: 2.5
+    total_time_step: 10
+    cost_sigma: 0.05
+    epsilon_dist: 4.0
+    max_iterations: 100
+    
+    # Noise model parameters
+    position_noise: 1.0
+    velocity_noise: 0.1
+    pose_fix_sigma: 0.0001
+    velocity_fix_sigma: 0.0001
+    acceleration_fix_sigma: 0.0001
+
+    # Optimization parameters
+    optimization_algorithm: 'DOGLEG' # Options: 'GN', 'LM', or 'DOGLEG'
+    trust_region_size: 1.0
+    verbose: False  
+
+    # Robot parameters
+    robot_model: "fast_usv" # Options: 'mp-auv' or 'fast_usv'
+    robot_radius: 1.0
+
+    # # GP parameters
+    # gp_interpolation: True
+    # gp_covariance_kernel: 'RBF'
+    # gp_covariance_scale: 1.0
+    # gp_covariance_length: 0.5 
+
+    # # Visualization parameters
+    # visualize: True
+    # visualize_interpolation: True
+    # interpolation_step: 0.1
+
+    # # Topic names
+    # map_topic: '/map'
+    # start_topic: '/initialpose'
+    # goal_topic: '/move_base_simple/goal'
+    # path_topic: '/global_path'
+
+    # For testing: Sample map parameters
+    sample_map:
+      # Robot parameters
+      robot_radius: 3.0
+      
+      # Map parameters
+      map_width: 40.0
+      map_height: 40.0
+      map_resolution: 0.1
+      
+      # Start and goal positions
+      start_x: -6.0
+      start_y: -6.0
+      goal_x: 16.0
+      goal_y: 12.0
+      
+      # Obstacle parameters
+      obstacle_radius: 2.0
+    
