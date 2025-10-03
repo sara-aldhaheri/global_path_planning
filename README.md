@@ -18,7 +18,7 @@ mkdir build && cmake .. && sudo make install
 ### GPP Installation
 ```
 cd navigation/src
-git clone xxx
+git clone https://github.com/sara-aldhaheri/global_path_planning
 cd ..
 colcon build
 ```
